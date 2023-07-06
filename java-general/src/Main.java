@@ -8,8 +8,14 @@ public class Main {
         double doubleValue = 0.00000000003; //double is the default type for any decimal/real number
         //0.00000000003 = 3.0E-11 = 3 * 10^-11
         float flotValue = 0.005F; //F is mandatory to explicitly say we're using a float number
+        char myChar = 'L'; //it has 2 bytes of size, the double of a char in C
+        char unicodeChar = '\u004C';
+        char myIntChar = 76;
+        boolean isEnabled = true;
 
         System.out.println(underscoreNum);
         System.out.println(doubleValue);
+        System.out.println(unicodeChar);
+        System.out.println(myIntChar);
     }
 }
