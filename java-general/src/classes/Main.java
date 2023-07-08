@@ -2,6 +2,8 @@ package classes;
 
 public class Main {
     public static void main(String[] args) {
+        StaticMethods.printHello();
+
         Car c = new Car();
         c.describe();
 
