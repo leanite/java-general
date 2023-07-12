@@ -16,17 +16,22 @@ public class FakeService {
         );
     }
 
-    public Book findById(int id) {
+    public Optional<Book> findById(int id) {
         for (Book book : this.books) {
-            if (id == book.id()) return book;
+            if (id == book.id()) return Optional.of(book);
         }
 
-        return null;
+        return Optional.empty();
     }
 
     public void printTitleOfId(int id) {
-        /*String title = service.findBookById(id)
-                .map(book -> book.getTitle())
-                .orElse("");*/
+        this.findById(id).ifPresentOrElse(
+                book -> {
+                    System.out.println(book);
+                },
+                () -> {
+                    System.out.println("Book not found");
+                }
+        );
     }
 }

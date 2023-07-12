@@ -15,22 +15,7 @@ import java.util.Optional;
 public class Optionals {
     public static void main(String[] args) {
         FakeService service = new FakeService();
-        service.printTitleOfId(4);
-
-        String str = null;
-        processPrint(str);
-
-        Optional<String> optString = Optional.ofNullable("Hello");
-        optString.
-    }
-
-    public static void processPrint(String string) {
-        Optional<String> optString = Optional.ofNullable(string);
-
-        //optString.ifPresent(value -> System.out.println(value));
-        optString.ifPresentOrElse(
-                value ->
-                        System.out.println(value),
-                () -> System.out.println("null"));
+        service.printTitleOfId(2);
+        service.printTitleOfId(10);
     }
 }
